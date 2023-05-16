@@ -12,8 +12,12 @@ factorial(){
 
 while :
 do
-   echo "Enter a number: "
-   read x
-   factorial  $x
+   read -p "Enter a number: " x 
+   read -p "Enter second number: " y 
+   a=actorial  $x
+   b=factorial $y
+
    break
 done
+echo $a 
+echo $b
