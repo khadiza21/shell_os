@@ -8,7 +8,7 @@ process_counter=1
 
 # Function to allocate memory for a process
 allocate_memory() {
-    echo "Enter memory required for process $process_counter (in Bytes) – "
+    echo "Enter memory required for process $process_counter (in Bytes) :"
     read memory_required
 
     if [ $memory_required -le $total_memory ]; then
@@ -26,13 +26,13 @@ allocate_memory() {
 }
 
 # Main program
-echo "Enter the total memory available (in Bytes) – "
+echo "Enter the total memory available (in Bytes) : "
 read total_memory
 
 while true; do
     allocate_memory
 
-    echo "Total Memory Available – $total_memory"
+    echo "Total Memory Available : $total_memory"
     echo "Total Memory Allocated is $memory_allocated"
     echo "Total External Fragmentation is $external_fragmentation"
 
